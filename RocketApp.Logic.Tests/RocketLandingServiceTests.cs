@@ -29,7 +29,7 @@ namespace RocketApp.Logic.Tests
         {
             var result = _sut.CanLand(x, y);
 
-            Assert.AreEqual(RocketAppConsts.OkForLanding, result);
+            Assert.AreEqual(RocketLandingResponseConsts.OkForLanding, result);
         }
 
         [Test]
@@ -43,7 +43,7 @@ namespace RocketApp.Logic.Tests
         {
             var result = _sut.CanLand(x, y);
 
-            Assert.AreEqual(RocketAppConsts.OutOfPlatform, result);
+            Assert.AreEqual(RocketLandingResponseConsts.OutOfPlatform, result);
         }
     }
 }

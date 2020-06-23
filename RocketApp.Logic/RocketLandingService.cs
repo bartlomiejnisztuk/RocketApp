@@ -24,7 +24,7 @@ namespace RocketApp.Logic
 
             if (landingPlatform == null)
             {
-                return RocketAppConsts.OutOfPlatform;
+                return RocketLandingResponseConsts.OutOfPlatform;
             }
 
             var rocketsOnPlatform = landingPlatform.TakenPositions;
@@ -37,10 +37,10 @@ namespace RocketApp.Logic
             {
                 SetPositionTaken(askedPosition, landingPlatform);
 
-                return RocketAppConsts.OkForLanding;
+                return RocketLandingResponseConsts.OkForLanding;
             }
 
-            return RocketAppConsts.Clash;
+            return RocketLandingResponseConsts.Clash;
         }
 
         private void SetPositionTaken(Position position, LandingPlatform platform)

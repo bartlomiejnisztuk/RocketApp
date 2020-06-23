@@ -1,6 +1,4 @@
-﻿using RocketApp.Logic;
-
-namespace RocketApp.Data.Models
+﻿namespace RocketApp.Data.Models
 {
     public class RocketPosition
     {

@@ -46,16 +46,16 @@ namespace RocketApp.Logic.Tests
             {
                 get
                 {
-                    yield return new TestCaseData(10, 10).Returns(RocketAppConsts.OkForLanding);
-                    yield return new TestCaseData(9, 9).Returns(RocketAppConsts.Clash);
-                    yield return new TestCaseData(9, 10).Returns(RocketAppConsts.Clash);
-                    yield return new TestCaseData(9, 11).Returns(RocketAppConsts.Clash);
-                    yield return new TestCaseData(10, 9).Returns(RocketAppConsts.Clash);
-                    yield return new TestCaseData(10, 10).Returns(RocketAppConsts.Clash);
-                    yield return new TestCaseData(10, 11).Returns(RocketAppConsts.Clash);
-                    yield return new TestCaseData(11, 9).Returns(RocketAppConsts.Clash);
-                    yield return new TestCaseData(11, 10).Returns(RocketAppConsts.Clash);
-                    yield return new TestCaseData(11, 11).Returns(RocketAppConsts.Clash);
+                    yield return new TestCaseData(10, 10).Returns(RocketLandingResponseConsts.OkForLanding);
+                    yield return new TestCaseData(9, 9).Returns(RocketLandingResponseConsts.Clash);
+                    yield return new TestCaseData(9, 10).Returns(RocketLandingResponseConsts.Clash);
+                    yield return new TestCaseData(9, 11).Returns(RocketLandingResponseConsts.Clash);
+                    yield return new TestCaseData(10, 9).Returns(RocketLandingResponseConsts.Clash);
+                    yield return new TestCaseData(10, 10).Returns(RocketLandingResponseConsts.Clash);
+                    yield return new TestCaseData(10, 11).Returns(RocketLandingResponseConsts.Clash);
+                    yield return new TestCaseData(11, 9).Returns(RocketLandingResponseConsts.Clash);
+                    yield return new TestCaseData(11, 10).Returns(RocketLandingResponseConsts.Clash);
+                    yield return new TestCaseData(11, 11).Returns(RocketLandingResponseConsts.Clash);
                 }
             }
             public static IEnumerable OutOfPlatformTestCases
@@ -68,7 +68,7 @@ namespace RocketApp.Logic.Tests
                         {
                             if ((x < 5 || x > 15) && (y < 5 || y > 15))
                             {
-                                yield return new TestCaseData(x, y).Returns(RocketAppConsts.OutOfPlatform);
+                                yield return new TestCaseData(x, y).Returns(RocketLandingResponseConsts.OutOfPlatform);
                             }
                         }
                     }
@@ -79,13 +79,13 @@ namespace RocketApp.Logic.Tests
             {
                 get
                 {
-                    yield return new TestCaseData(5, 5).Returns(RocketAppConsts.OkForLanding);
-                    yield return new TestCaseData(5, 8).Returns(RocketAppConsts.OkForLanding);
-                    yield return new TestCaseData(8, 5).Returns(RocketAppConsts.OkForLanding);
-                    yield return new TestCaseData(11, 8).Returns(RocketAppConsts.OkForLanding);
-                    yield return new TestCaseData(8, 11).Returns(RocketAppConsts.OkForLanding);
-                    yield return new TestCaseData(14, 11).Returns(RocketAppConsts.OkForLanding);
-                    yield return new TestCaseData(11, 14).Returns(RocketAppConsts.OkForLanding);
+                    yield return new TestCaseData(5, 5).Returns(RocketLandingResponseConsts.OkForLanding);
+                    yield return new TestCaseData(5, 8).Returns(RocketLandingResponseConsts.OkForLanding);
+                    yield return new TestCaseData(8, 5).Returns(RocketLandingResponseConsts.OkForLanding);
+                    yield return new TestCaseData(11, 8).Returns(RocketLandingResponseConsts.OkForLanding);
+                    yield return new TestCaseData(8, 11).Returns(RocketLandingResponseConsts.OkForLanding);
+                    yield return new TestCaseData(14, 11).Returns(RocketLandingResponseConsts.OkForLanding);
+                    yield return new TestCaseData(11, 14).Returns(RocketLandingResponseConsts.OkForLanding);
                 }
             }
         }
